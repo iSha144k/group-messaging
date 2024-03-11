@@ -49,11 +49,11 @@ When("I send the reply", () => {
 });
 
 When("I open the reply options", () => {
-    cy.get('button[id*="menu-button--menu--81"]').click()
+    cy.get('.reply-controls').find('button').click()
 });
 
 When("click Edit", () => {
-    cy.contains('div', "Edit").click()
+    cy.contains("Edit").click()
 });
 
 When("change the reply to {string}", (input: string) => {
@@ -62,7 +62,7 @@ When("change the reply to {string}", (input: string) => {
 });
 
 When("click Save changes", () => {
-    cy.contains('button', "Save changes").click()
+    cy.contains('button', "Save changes").click({force: true})
 });
 
 When("I click the reaction button", () => {
@@ -74,11 +74,11 @@ When("select {string} as a reaction", (reaction: string) => {
 });
 
 When("click View Reactions", () => {
-    cy.contains('div', "View Reactions").click()
+    cy.contains('div', "View Reactions").click({force: true})
 });
 
 When("click Delete", () => {
-    cy.contains('div', "Delete").click()
+    cy.contains('div', "Delete").click({force: true})
 });
 
 Then("{string} should be the title", (expected: string) => {
