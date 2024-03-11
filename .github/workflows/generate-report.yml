@@ -25,7 +25,10 @@ jobs:
       uses: cypress-io/github-action@v6
       with:
         browser: chrome
-
+      env:
+        MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
+        MAILOSAUR_EMAIL: ${{secrets.MAILOSAUR_EMAIL}}
+        MAILOSAUR_API_KEY: ${{secrets.MAILOSAUR_API_KEY}}
     - name: Copy Execution Videos and Screenshots
       run: |
         mkdir public
