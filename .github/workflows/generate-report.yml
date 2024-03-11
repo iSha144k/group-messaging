@@ -10,10 +10,10 @@ on:
 jobs:
   cypress-test:
     name: Runs on Chrome
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     container: cypress/browsers:node-18.15.0-chrome-106.0.5249.61-1-ff-99.0.1-edge-114.0.1823.51-1
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Install cypress and verify
       run: |
@@ -21,9 +21,9 @@ jobs:
         $(npm bin)/cypress verify
 
     - name: Run Cypress Tests
-      run: |
-        npm run cy:run
-      continue-on-error: false
+      uses: cypress-io/github-action@v6
+      with:
+        browser: chrome
 
     - name: Copy Execution Videos and Screenshots
       run: |
