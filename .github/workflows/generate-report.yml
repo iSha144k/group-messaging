@@ -14,11 +14,12 @@ jobs:
     container: cypress/browsers:node-18.15.0-chrome-106.0.5249.61-1-ff-99.0.1-edge-114.0.1823.51-1
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - name: Setup node
+      uses: actions/setup-node@v4
       with:
         node-version: 18
         cache: 'npm'
-      run: npm ci
+    - run: npm ci
 
     - name: Run Cypress Tests
       uses: cypress-io/github-action@v6
