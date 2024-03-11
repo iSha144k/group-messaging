@@ -11,31 +11,37 @@ jobs:
   cypress-test:
     name: Runs on Chrome
     runs-on: ubuntu-latest
-    container: cypress/browsers:node12.18.0-chrome83-ff77
+    container: cypress/browsers:node16.13.2-chrome97-ff96
     steps:
     - uses: actions/checkout@v2
-    
-    - name: Install cypress and verify 
+
+    - name: Install cypress and verify
       run: |
         npm ci
         $(npm bin)/cypress verify
-        
-    - name: Run Cypress tests 
-      run: npm run cy:run
+
+    - name: Run Cypress tests
+      run: |
+        npm install --global serve
+        serve ./build --listen 3000 &
+        rm package*
+        npm install @percy/cypress typescript
+        npm install --global @percy/cli
+        percy exec --verbose -- cypress run
       continue-on-error: false
 
-    - name: Copy test and execution videos and screenshots 
+    - name: Copy test and execution videos and screenshots
       run: |
         mkdir public
         cp -r cypress/videos public/videos
         cp -r cypress/screenshots public/screenshots
 
-    - name: Merge test reports 
+    - name: Merge test reports
       run: npm run report:merge
-      
-    - name: Generate HTML report 
+
+    - name: Generate HTML report
       run: npm run report:generate
-      
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
