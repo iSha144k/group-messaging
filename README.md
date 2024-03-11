@@ -1,5 +1,6 @@
 # Group Messaging
 
+# Setting up the environment
 ## Set up Mailosaur
 1. Set up email 
 2. Create a new .env file in the root directory 
@@ -12,7 +13,7 @@
 
 ## Set up Planning Center
 1. Create an account in the Planning Center
-2. Setup Church Center
+2. Ensure you can be accessed on Church Center
 3. Go to the groups application and create a group 
 4. Go to the group's settings and enable group messaging. 
 5. Ensure messaging is available to members and leaders. 
