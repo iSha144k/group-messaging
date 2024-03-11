@@ -17,29 +17,24 @@ jobs:
 
     - name: Install cypress and verify
       run: |
-        npm ci
+        npm ci 
         $(npm bin)/cypress verify
 
-    - name: Run Cypress tests
+    - name: Run Cypress Tests
       run: |
-        npm install --global serve
-        serve ./build --listen 3000 &
-        rm package*
-        npm install @percy/cypress typescript
-        npm install --global @percy/cli
-        percy exec --verbose -- cypress run
+        npm run cy:run
       continue-on-error: false
 
-    - name: Copy test and execution videos and screenshots
+    - name: Copy Execution Videos and Screenshots
       run: |
         mkdir public
         cp -r cypress/videos public/videos
         cp -r cypress/screenshots public/screenshots
 
-    - name: Merge test reports
+    - name: Merge Test Reports
       run: npm run report:merge
 
-    - name: Generate HTML report
+    - name: Generate HTML Report
       run: npm run report:generate
 
     - name: Deploy
