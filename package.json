@@ -33,5 +33,6 @@
     "cypress-mailosaur": "^2.14.0",
     "dotenv": "^16.4.5",
     "ts-node": "^10.9.2"
-  }
+  },
+  "type": "module"
 }

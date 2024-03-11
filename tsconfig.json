@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "esModuleInterop": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
+//    "esModuleInterop": true,
+    "module": "ESNext",
+    "moduleResolution": "Node"
+  },
+  "ts-node": {
+    "esm": true
   }
 }
