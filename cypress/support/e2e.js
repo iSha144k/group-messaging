@@ -19,8 +19,9 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 import "cypress-mailosaur";
-
+import dotenv from 'dotenv';
+dotenv.config();  // Load environment variables from .env file
 
 beforeEach( () => {
-    cy.login('anything@aggxrq40.mailosaur.net', 'aggxrq40')
+    cy.login(Cypress.env('MAILOSAUR_EMAIL'), Cypress.env('MAILOSAUR_SERVER'))
 })
