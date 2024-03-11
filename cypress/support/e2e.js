@@ -19,9 +19,35 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 import "cypress-mailosaur";
+import addContext from 'mochawesome/addContext'
 import dotenv from 'dotenv';
 dotenv.config();  // Load environment variables from .env file
 
 beforeEach( () => {
     cy.login(Cypress.env('MAILOSAUR_EMAIL'), Cypress.env('MAILOSAUR_SERVER'))
+})
+
+const titleToFileName = (title) =>
+    title.replace(/[:\/]/g, '')
+
+Cypress.on('test:after:run', (test, runnable) => {
+    if (test.state === 'failed') {
+        let parent = runnable.parent
+        let filename = ''
+        while (parent && parent.title) {
+            filename = `${titleToFileName(
+                parent.title,
+            )} -- ${filename}`
+            parent = parent.parent
+        }
+        filename += `${titleToFileName(
+            test.title,
+        )} (failed).png`
+        addContext(
+            { test },
+            `../screenshots/${Cypress.spec.name}/${filename}`,
+        )
+    }
+    // always add the video
+    addContext({ test }, `../videos/${Cypress.spec.name}.mp4`)
 })

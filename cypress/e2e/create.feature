@@ -38,14 +38,14 @@ Feature: Create
     And I click cancel
     Then "Fourth Title" should be the drafted title
 
-#  Scenario: Delete a drafted message
-#    Given I am on the messages screen
-#    And I click the create button
-#    And a message with "Fifth Title" as the title
-#    When the message is canceled
-#    And I click okay
-#    Then I should see the messages screen
-#
+  Scenario: Delete a drafted message
+    Given I am on the messages screen
+    And I click the create button
+    And a message with "Fifth Title" as the title
+    When the message is canceled
+    And I click okay
+    Then I should see the messages screen
+
 #  Scenario: Delete a empty draft
 #    Given I am on the messages screen
 #    And I click the create button

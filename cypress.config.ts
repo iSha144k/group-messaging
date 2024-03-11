@@ -29,6 +29,16 @@ export default defineConfig({
         setupNodeEvents,
         defaultCommandTimeout: 10000,
         testIsolation: false,
+        reporter: "mochawesome",
+        reporterOptions: {
+            useInlineDiffs: true,
+            embeddedScreenshots: true,
+            reportDir: 'cypress/results',
+            reportFilename: '[name].html',
+            overwrite: true,
+            html: true,
+            json: true,
+        }
     },
     env: {
         MAILOSAUR_SERVER: process.env.MAILOSAUR_SERVER,
