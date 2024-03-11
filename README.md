@@ -22,7 +22,6 @@
 ## Set up your Church Center application 
 1. Visit your church on the Church Center
 2. Join the group
-3. 
 
 ## Generate Report
 Run the test plan
@@ -34,4 +33,8 @@ Consolidate all reports into one
 Generate the html version of all reports
 `npm run report:generate`
 
+
+Alternatively, you may run `npx cypress open`, select e2e, and select Chrome as the browser. Click on each funtion and the tests will run and generate a report. 
+
 ## Report Bugs
+Please report the bugs on the [bugs](https://dot-almanac-c71.notion.site/deb71ae641be4f0fa250307b5cf46940?v=4740937bc30d4b8a856d24629c2d3a9e&pvs=4) database.

@@ -23,6 +23,7 @@ async function setupNodeEvents(
 }
 
 export default defineConfig({
+    video: true,
     e2e: {
         baseUrl: "https://duckduckgo.com",
         specPattern: "**/*.feature",
