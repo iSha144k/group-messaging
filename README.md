@@ -1,7 +1,19 @@
 # Group Messaging
 
-# Setting up the environment
-## Set up Mailosaur
+## Automated Test Plan
+Please review the [latest run](https://isha144k.github.io/group-messaging/mochawesome-report/report.html) of the test plan to review the plan details. 
+
+To rerun the tests
+1. Visit the [Generate Cypress Report](https://github.com/iSha144k/group-messaging/actions/workflows/generate-report.yml) Github Action
+2. Click run workflow
+3. Click run workflow again 
+4. Wait for work flow to finish 
+5. Review the results of the [latest run](https://isha144k.github.io/group-messaging/mochawesome-report/report.html)
+
+To run the automated tests on a different environment, please follow the following steps below 
+
+## Setting up your own environment
+### Set up Mailosaur
 1. Set up email 
 2. Create a new .env file in the root directory 
 3. Copy the .env-example into the .env file
@@ -11,7 +23,7 @@
 7. Copy the server id at the top of the page and paste it in the .env file 
 8. Copy the email at the top of the page and paste it in the .env file
 
-## Set up Planning Center
+### Set up Planning Center
 1. Create an account in the Planning Center
 2. Ensure you can be accessed on Church Center
 3. Go to the groups application and create a group 
@@ -19,12 +31,12 @@
 5. Ensure messaging is available to members and leaders. 
 6. Add Group visibility on the Church Center application.
    
-## Set up your Church Center application 
+### Set up your Church Center application 
 1. Visit your church on the Church Center
 2. Join the group
 
 
-## Test Plan
+### Test Plan
 You may review the test plan by examining each of the following files. 
 1. [Create](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/create.feature)
 2. [Manage](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/manage.feature)
@@ -32,12 +44,12 @@ You may review the test plan by examining each of the following files.
 
 Run `npm run cy:run` to run the tests in the background or `npx cypress open` to run them in a browser. If you are running them in a browser, you may select E2E as the test type and Chrome as the browser.
 
-## Generate Report
+### Generate Report
 Consolidate all reports into one
 `npm run report:merge`
 
 Generate the html version of all reports
 `npm run report:generate`
 
-## Report Bugs
+### Report Bugs
 Please report the bugs on the [bugs](https://dot-almanac-c71.notion.site/deb71ae641be4f0fa250307b5cf46940?v=4740937bc30d4b8a856d24629c2d3a9e&pvs=4) database.

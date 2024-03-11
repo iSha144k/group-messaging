@@ -23,3 +23,27 @@ Feature: Manage
     And click Delete
     And I click okay
     Then "Recent Message v2" should not exist
+
+  Scenario: Remove First Title message
+    Given I am on the messages screen
+    And I open "First Title"
+    When I open the options
+    And click Delete
+    And I click okay
+    Then "First Title" should not exist
+
+  Scenario: Remove First Title message
+    Given I am on the messages screen
+    And I open "Second Title"
+    When I open the options
+    And click Delete
+    And I click okay
+    Then "Second Title" should not exist
+
+  Scenario: Remove Sixth Title message
+    Given I am on the messages screen
+    And I open "Sixth Title"
+    When I open the options
+    And click Delete
+    And I click okay
+    Then "Sixth Title" should not exist
