@@ -1,8 +1,3 @@
 /node_modules/
 /.idea/
 .env
-/cypress/screenshots/
-/cypress/results/
-/mochawesome-report/
-/cypress/report.json
-/cypress/videos/
