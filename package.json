@@ -1,0 +1,28 @@
+{
+  "name": "groups-messaging",
+  "version": "1.0.0",
+  "description": "groups messaging web test automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iesha Osias",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.6.6",
+    "typescript": "^5.4.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": [
+      "cypress/e2e/[filepath]/**/*.{js,ts}",
+      "cypress/e2e/[filepath].{js,ts}",
+      "cypress/support/step_definitions/**/*.{js,ts}"
+    ]
+  },
+  "dependencies": {
+    "cypress-mailosaur": "^2.14.0"
+  }
+}
