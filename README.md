@@ -28,7 +28,7 @@
 You may review the test plan by examining each of the following files. 
 1. [Create] (https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/create.feature)
 2. [Manage] (https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/manage.feature)
-3. Reaction and Replies 
+3. [Reaction and Replies] (https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/replies.feature) 
 
 Run `npm run cy:run` to run the tests in the background or `npx cypress open` to run them in a browser. If you are running them in a browser, you may select E2E as the test type and Chrome as the browser.
 
