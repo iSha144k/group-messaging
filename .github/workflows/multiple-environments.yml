@@ -41,9 +41,6 @@ jobs:
       # leaving Cypress Cloud hanging ...
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
-      matrix:
-        # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -58,7 +55,6 @@ jobs:
         with:
           browser: chrome
           record: true
-          parallel: true
           group: "UI - Chrome"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
@@ -84,9 +80,6 @@ jobs:
       # leaving Cypress Cloud hanging ...
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
-      matrix:
-        # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -102,7 +95,6 @@ jobs:
           config: '{"e2e":{"viewportWidth":375,"viewportHeight":667}}'
           browser: chrome
           record: true
-          parallel: true
           group: "UI - Chrome - Mobile"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
@@ -127,9 +119,6 @@ jobs:
       # leaving Cypress Cloud hanging ...
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
-      matrix:
-        # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -144,7 +133,6 @@ jobs:
         with:
           browser: firefox
           record: true
-          parallel: true
           group: "UI - Firefox"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
@@ -169,9 +157,6 @@ jobs:
       # leaving Cypress Cloud hanging ...
       # https://github.com/cypress-io/github-action/issues/48
       fail-fast: false
-      matrix:
-        # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -187,7 +172,6 @@ jobs:
           config: '{"e2e":{"viewportWidth":375,"viewportHeight":667}}'
           browser: firefox
           record: true
-          parallel: true
           group: "UI - Firefox - Mobile"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
