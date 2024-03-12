@@ -23,6 +23,7 @@ async function setupNodeEvents(
 }
 
 export default defineConfig({
+    projectId: process.env.CYPRESS_PROJECT_ID,
     video: true,
     e2e: {
         baseUrl: "https://duckduckgo.com",
@@ -45,5 +46,6 @@ export default defineConfig({
         MAILOSAUR_SERVER: process.env.MAILOSAUR_SERVER,
         MAILOSAUR_EMAIL: process.env.MAILOSAUR_EMAIL,
         MAILOSAUR_API_KEY: process.env.MAILOSAUR_API_KEY,
+        CYPRESS_RECORD_KEY: process.env.CYPRESS_RECORD_KEY
     },
 });
