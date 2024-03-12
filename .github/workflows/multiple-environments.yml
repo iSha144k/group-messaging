@@ -35,12 +35,6 @@ jobs:
       image: cypress/browsers:node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
       options: --user 1001
     needs: install
-    strategy:
-      # when one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving Cypress Cloud hanging ...
-      # https://github.com/cypress-io/github-action/issues/48
-      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -50,12 +44,12 @@ jobs:
           cache: 'npm'
       - run: npm ci
 
-      - name: "UI Tests - Chrome"
+      - name: "Chrome Web"
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
           record: true
-          group: "UI - Chrome"
+          group: "Chrome Web"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
           MAILOSAUR_EMAIL: ${{secrets.MAILOSAUR_EMAIL}}
@@ -74,12 +68,6 @@ jobs:
       image: cypress/browsers:node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
       options: --user 1001
     needs: install
-    strategy:
-      # when one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving Cypress Cloud hanging ...
-      # https://github.com/cypress-io/github-action/issues/48
-      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -89,13 +77,13 @@ jobs:
           cache: 'npm'
       - run: npm ci
 
-      - name: "UI Tests - Chrome - Mobile"
+      - name: "Chrome Mobile Web"
         uses: cypress-io/github-action@v6
         with:
           config: '{"e2e":{"viewportWidth":375,"viewportHeight":667}}'
           browser: chrome
           record: true
-          group: "UI - Chrome - Mobile"
+          group: "Chrome Mobile Web"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
           MAILOSAUR_EMAIL: ${{secrets.MAILOSAUR_EMAIL}}
@@ -113,12 +101,6 @@ jobs:
       image: cypress/browsers:node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
       options: --user 1001
     needs: install
-    strategy:
-      # when one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving Cypress Cloud hanging ...
-      # https://github.com/cypress-io/github-action/issues/48
-      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -128,12 +110,12 @@ jobs:
           cache: 'npm'
       - run: npm ci
 
-      - name: "UI Tests - Firefox"
+      - name: "Firefox Web"
         uses: cypress-io/github-action@v6
         with:
           browser: firefox
           record: true
-          group: "UI - Firefox"
+          group: "Firefox Web"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
           MAILOSAUR_EMAIL: ${{secrets.MAILOSAUR_EMAIL}}
@@ -151,12 +133,6 @@ jobs:
       image: cypress/browsers:node-18.16.0-chrome-114.0.5735.133-1-ff-114.0.2-edge-114.0.1823.51-1
       options: --user 1001
     needs: install
-    strategy:
-      # when one test fails, DO NOT cancel the other
-      # containers, because this will kill Cypress processes
-      # leaving Cypress Cloud hanging ...
-      # https://github.com/cypress-io/github-action/issues/48
-      fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - name: Setup node
@@ -166,13 +142,13 @@ jobs:
           cache: 'npm'
       - run: npm ci
 
-      - name: "UI Tests - Firefox - Mobile"
+      - name: "Firefox Mobile Web"
         uses: cypress-io/github-action@v6
         with:
           config: '{"e2e":{"viewportWidth":375,"viewportHeight":667}}'
           browser: firefox
           record: true
-          group: "UI - Firefox - Mobile"
+          group: "Firefox Mobile Web"
         env:
           MAILOSAUR_SERVER: ${{secrets.MAILOSAUR_SERVER}}
           MAILOSAUR_EMAIL: ${{secrets.MAILOSAUR_EMAIL}}

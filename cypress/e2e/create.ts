@@ -2,7 +2,7 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 const LONG_TITLE = "The Church Center application users are most likely aware of the 144-character limit on the title when creating a new message in a group on the app."
 
 Given("I am on the messages screen", () => {
-    cy.visit("https://christ-ministry-420749.churchcenter.com/my/groups/test-group/messages");
+    cy.visit("/my/groups/test-group/messages");
 });
 
 Given("I click the create button", () => {

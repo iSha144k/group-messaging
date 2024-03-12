@@ -2,7 +2,7 @@ import {Given, Then, When} from "@badeball/cypress-cucumber-preprocessor";
 
 
 Given("I am on the messages screen", () => {
-    cy.visit("https://christ-ministry-420749.churchcenter.com/my/groups/test-group/messages");
+    cy.visit("/my/groups/test-group/messages");
 });
 
 Given("I click the create button", () => {

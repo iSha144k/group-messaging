@@ -26,7 +26,7 @@ export default defineConfig({
     projectId: process.env.CYPRESS_PROJECT_ID,
     video: true,
     e2e: {
-        baseUrl: "https://duckduckgo.com",
+        baseUrl: "https://christ-ministry-420749.churchcenter.com",
         specPattern: "**/*.feature",
         setupNodeEvents,
         defaultCommandTimeout: 10000,
