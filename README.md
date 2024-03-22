@@ -1,14 +1,14 @@
 # Group Messaging
 
 ## Automated Test Plan
-Please review the [latest run](https://isha144k.github.io/group-messaging/cypress/report/index.html) of the test plan to review the plan details. 
+Please review the [latest run](https://isha144k.github.io/group-messaging/cypress/reports/index.html) of the test plan to review the plan details. 
 
 To rerun the tests
 1. Visit the [Generate Cypress Report](https://github.com/iSha144k/group-messaging/actions/workflows/generate-report.yml) Github Action
 2. Click run workflow
 3. Click run workflow again 
 4. Wait for work flow to finish 
-5. Review the results of the [latest run](https://isha144k.github.io/group-messaging/mochawesome-report/report.html)
+5. Review the results of the [latest run](https://isha144k.github.io/group-messaging/cypress/reports/index.html)
 
 To run the automated tests on a different environment, please follow the following steps below 
 
