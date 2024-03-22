@@ -1,7 +1,7 @@
 # Group Messaging
 
 ## Automated Test Plan
-Please review the [latest run](https://isha144k.github.io/group-messaging/mochawesome-report/report.html) of the test plan to review the plan details. 
+Please review the [latest run](https://isha144k.github.io/group-messaging/cypress/report/index.html) of the test plan to review the plan details. 
 
 To rerun the tests
 1. Visit the [Generate Cypress Report](https://github.com/iSha144k/group-messaging/actions/workflows/generate-report.yml) Github Action
@@ -43,14 +43,11 @@ You may review the test plan by examining each of the following files.
 3. [Reaction and Replies](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/replies.feature) 
 4. [Permissions](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/permissions.feature)
 
-Run `npm run cy:run` to run the tests in the background or `npx cypress open` to run them in a browser. If you are running them in a browser, you may select E2E as the test type and Chrome as the browser.
+Run `npm run test` to run the tests in the background or `npx cypress open` to run them in a browser. If you are running them in a browser, you may select E2E as the test type and Chrome as the browser.
 
 ### Generate Report
-Consolidate all reports into one
-`npm run report:merge`
-
 Generate the html version of all reports
-`npm run report:generate`
+`npm run report`
 
 ### Report Bugs
 Please report the bugs on the [bugs](https://dot-almanac-c71.notion.site/deb71ae641be4f0fa250307b5cf46940?v=4740937bc30d4b8a856d24629c2d3a9e&pvs=4) database.
