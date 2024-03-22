@@ -72,4 +72,5 @@ report.generate({
     reportName: "Group Messaging",
     displayDuration: true,
     displayReportTime: true,
+    saveCollectedJSON: true,
 });

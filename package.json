@@ -4,7 +4,7 @@
   "description": "groups messaging web test automation",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --browser chrome",
+    "test": "cypress run --browser chrome --reporter json",
     "report": "node reporter.js"
   },
   "author": "Iesha Osias",
