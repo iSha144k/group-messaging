@@ -41,13 +41,13 @@ Please review the [latest run](https://isha144k.github.io/group-messaging/cypres
 | No Budget            | There is no budget for this test plan as it is simply an exercise. The test plan will only utilize tools that are open source.                                                             |
 
 #### Scope 
-**Test Level**|**Test Item**|**Description**|**Scheule**
-:-----:|:-----:|:-----:|:-----:
-Functional|Creation |As a user, I want to create a message so that I can relay information to my congregation. |Sprint 1
-Functional|Management|As a user, I want to have some control of the messages so that it can best suit my needs  |Sprint 1
-Functional|Reactions|As a user, I want to be able to interact with messages that I receive so that I can confirm receipt of information. |Sprint 1
-Non Functional|Security |Ensure messages are only submitted by authorized users|Sprint 2
-Non Functional|Stress Testing|Ensure that a message remains accessible in the event of a high number of reactions and replies |Sprint 2
+**Test Level**| **Test Item**  |**Description**|**Scheule**
+:-----:|:--------------:|:-----:|:-----:
+Functional|    Creation    |As a user, I want to create a message so that I can relay information to my congregation. |Sprint 1
+Functional|   Management   |As a user, I want to have some control of the messages so that it can best suit my needs  |Sprint 1
+Functional|    Replies     |As a user, I want to be able to interact with messages that I receive so that I can confirm receipt of information. |Sprint 1
+Non Functional|    Security    |Ensure messages are only submitted by authorized users|Sprint 2
+Non Functional| Stress Testing |Ensure that a message remains accessible in the event of a high number of reactions and replies |Sprint 2
 
 #### Out of Scope
 1. Groups features outside of Church Center application
@@ -63,8 +63,9 @@ You may review the test plan by examining each of the following files.
 windows-chrome|Windows|Chrome
 windows-firefox|Windows|Firefox
 windows-edge|Windows|Edge
-
-
+mac-chrome|Mac|Chrome
+mac-firefox|Mac|Firefox
+mac-edge|Mac|Edge
 
 ##### Security Tests
 
@@ -80,8 +81,8 @@ enable|all|member
 #### Test Suite
 1. [Create](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/create.feature)
 2. [Manage](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/manage.feature)
-3. [Reaction and Replies](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/replies.feature) 
-4. [Permissions](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/permissions.feature)
+3. [Replies](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/replies.feature) 
+4. [Security](https://github.com/iSha144k/group-messaging/blob/main/cypress/e2e/security.feature)
 
 
 #### Entry Criteria
