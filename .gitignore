@@ -17,3 +17,4 @@
 /cypress/videos/*.mp4
 /cypress/downloads/*.html
 /cypress/screenshots/*/*.png
+/cypress/reports/

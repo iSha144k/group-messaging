@@ -52,7 +52,7 @@ report.generate({
     customData: {
         title: "Run Info",
         data: [
-            { label: "Project", value: "Group Messaging " },
+            { label: "Project", value: "Group Messaging" },
             { label: "Release", value: "2024.03.14" },
             { label: "Cypress Version", value: runInfo["cypressVersion"] },
             { label: "Node Version", value: runInfo["nodeVersion"] },
@@ -72,5 +72,4 @@ report.generate({
     reportName: "Group Messaging",
     displayDuration: true,
     displayReportTime: true,
-    saveCollectedJSON: true,
 });
